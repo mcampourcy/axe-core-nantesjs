@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest-axe": "^2.2.3",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "axe-core": "^3.1.2",
-    "majestic": "^1.2.24",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "^2.1.8"
+    "@types/jest-axe": "^3.2.2",
+    "@types/react": "^16.9.33",
+    "@types/react-dom": "^16.9.6",
+    "axe-core": "^3.5.3",
+    "majestic": "^1.6.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^5.3.1",
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,10 +20,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open -p 3001",
-    "majestic": "majestic"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "majestic": "majestic",
+    "lint": "eslint --ext js --ext jsx src"
   },
   "browserslist": [
     ">0.2%",
@@ -30,13 +30,17 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cypress": "^3.1.4",
-    "cypress-axe": "^0.3.0",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "jest": "^23.6.0",
-    "jest-axe": "^3.1.0",
-    "jest-enzyme": "^7.0.1"
+    "cypress": "^4.3.0",
+    "cypress-axe": "^0.8.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^24.9.0",
+    "jest-axe": "^3.4.0",
+    "jest-enzyme": "^7.1.2"
   },
   "majestic": {
     "jestScriptPath": "../node_modules/jest/bin/jest.js",
