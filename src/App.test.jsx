@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import ReactDOMServer from 'react-dom/server'
-import App from './App';
+import { App } from './App'
 import { axe as jestAxe } from 'jest-axe'
-import { shallow } from 'enzyme';
+import { shallow } from 'enzyme'
 
 describe('<App />', () => {
 
