@@ -2,8 +2,8 @@ import React from 'react'
 import { func } from 'prop-types'
 
 import { useForm } from '../../hooks'
-import { Button } from '../Button'
-import { Input } from '../Input'
+import { Button } from '../../components/Button'
+import { Input } from '../../components/Input'
 import { validate } from './formValidation'
 
 import './Form.css'
