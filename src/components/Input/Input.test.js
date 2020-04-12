@@ -21,10 +21,12 @@ describe('<Input />', () => {
   }
 
   beforeEach(() => {
-    const component = (<div>
-      <p id="describedBytest" />
-      <Input {...props} />
-    </div >)
+    const component = (
+      <main>
+        <p id="describedBytest" />
+        <Input {...props} />
+      </main >
+    )
 
     wrapper = mountToDoc(component)
     axeComponent = wrapper.getDOMNode()
@@ -49,7 +51,11 @@ describe('<Input />', () => {
     })
 
     it('should test axe core with jest plugin throw error', async () => {
-      const results = await jestAxe(jestAxeComponent)
+      const results = await jestAxe(jestAxeComponent, {
+        rules: {
+          'aria-valid-attr-value': { enabled: false },
+        },
+      })
       expect(results).toHaveNoViolations()
     })
 

@@ -8,8 +8,7 @@ describe('<App />', () => {
   let jestAxeComponent
 
   beforeEach(() => {
-    const component = (< App />)
-
+    const component = (<App />)
     jestAxeComponent = ReactDOMServer.renderToString(component)
   })
 
