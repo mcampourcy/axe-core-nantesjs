@@ -7,6 +7,7 @@
     "@types/react": "^16.9.33",
     "@types/react-dom": "^16.9.6",
     "axe-core": "^3.5.3",
+    "classnames": "^2.2.6",
     "majestic": "^1.6.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

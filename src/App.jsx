@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form } from './Form'
+import { Form } from './components/Form'
 import './App.css'
 
 export function App() {
@@ -12,15 +12,13 @@ export function App() {
 
   return (
     <main>
-      <section>
-        <h1 tabIndex="0" className={titleClass}>
-          Bienvenue à ce meetup
-        </h1>
-        <p tabIndex="0">
-          C'est un faux formulaire, rien que pour vos yeux.
-        </p>
-        <Form buttonAction={handleClick} />
-      </section>
+      <h1 tabIndex="0" className={titleClass}>
+        Bienvenue à ce meetup
+      </h1>
+      <p tabIndex="0">
+        C'est un faux formulaire, rien que pour vos yeux.
+      </p>
+      <Form buttonAction={handleClick} />
     </main>
   )
 }

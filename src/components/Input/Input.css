@@ -1,0 +1,24 @@
+input {
+  border-radius: 3px;
+  border-style: none;
+  padding: .3rem;
+}
+
+input.error {
+  border: 2px solid var(--danger);
+}
+
+/*input.error:focus:invalid {*/
+/*  outline: none;*/
+/*}*/
+
+label {
+  margin-bottom: .3rem;
+  margin-top: 1rem;
+}
+
+.input-error {
+  color: var(--danger);
+  font-size: 80%;
+  margin-top: 1rem;
+}

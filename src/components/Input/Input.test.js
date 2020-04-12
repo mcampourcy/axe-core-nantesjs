@@ -4,7 +4,7 @@ import axe from 'axe-core'
 import { axe as jestAxe } from 'jest-axe'
 
 import { Input } from './Input'
-import { mountToDoc } from '../setupTests'
+import { mountToDoc } from '../../setupTests'
 
 describe('<Input />', () => {
 
