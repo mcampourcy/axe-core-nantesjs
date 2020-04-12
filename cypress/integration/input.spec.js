@@ -5,11 +5,12 @@ describe('Logging In - HTML Web Form', () => {
     })
 
     it('displays errors on login', () => {
-      cy.get('input[name=login]').type('jane.lae')
+      cy.get('input[name=email]').type('jane.lae')
       cy.get('input[name=password]').click()
+      cy.get('button[type=submit]').click()
 
       cy.get('span')
-        .should('contain', 'Entrez une adresse email en @ nantes js .fr')
+        .should('contain', 'Veuillez entrer une adresse email valide. Exemple: exemple@exemple.fr')
     })
   })
 
