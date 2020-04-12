@@ -7,15 +7,14 @@ import { Input } from './Input'
 import { mountToDoc } from '../../setupTests'
 
 describe('<Input />', () => {
-
   let axeComponent
   let jestAxeComponent
   let wrapper
 
   const props = {
+    error: null,
     label: 'Test input',
     name: 'test',
-    onBlur: c => c,
     onChange: c => c,
     type: 'email',
     value: 'test',
@@ -23,7 +22,7 @@ describe('<Input />', () => {
 
   beforeEach(() => {
     const component = (<div>
-      <p id="describedBytest"></p>
+      <p id="describedBytest" />
       <Input {...props} />
     </div >)
 
@@ -34,17 +33,16 @@ describe('<Input />', () => {
   })
 
   describe('Testing Axe Core', () => {
-
     it('should test axe core', async () => {
       const res = await axe.run(axeComponent, {
         runOnly: {
-          values: ["wcag2a", "wcag2aa"]
+          values: ['wcag2a', 'wcag2aa'],
         },
-        resultTypes: ["violations"]
+        resultTypes: ['violations'],
       })
 
       if (res.violations.length > 0) {
-        console.log(res.violations)
+        console.info(res.violations)
       }
 
       expect(res.violations.length).toEqual(0)
@@ -59,9 +57,9 @@ describe('<Input />', () => {
       const results = await jestAxe(jestAxeComponent, {
         rules: {
           // for demonstration only, don't disable rules that need fixing.
-          'label': { enabled: false },
-          'aria-valid-attr-value': { enabled: false }
-        }
+          label: { enabled: false },
+          'aria-valid-attr-value': { enabled: false },
+        },
       })
 
       expect(results).toHaveNoViolations()

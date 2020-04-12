@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
-import { App } from './App'
 import { axe as jestAxe } from 'jest-axe'
 import { shallow } from 'enzyme'
+import { App } from './App'
 
 describe('<App />', () => {
-
   let jestAxeComponent
 
   beforeEach(() => {
@@ -24,7 +23,7 @@ describe('<App />', () => {
         rules: {
           // for demonstration only, don't disable rules that need fixing.
           // 'aria-valid-attr-value': { enabled: false }
-        }
+        },
       })
 
       expect(results).toHaveNoViolations()

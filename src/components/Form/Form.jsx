@@ -17,7 +17,7 @@ export function Form({ buttonAction }) {
   } = useForm(login, validate)
 
   function login() {
-    console.log('No errors, submit callback called!')
+    console.info('No errors, submit callback called!')
   }
 
   return (

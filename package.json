@@ -8,6 +8,9 @@
     "@types/react-dom": "^16.9.6",
     "axe-core": "^3.5.3",
     "classnames": "^2.2.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest-axe": "^3.4.0",
     "majestic": "^1.6.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -32,14 +35,12 @@
   "devDependencies": {
     "cypress": "^4.3.0",
     "cypress-axe": "^0.8.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^24.9.0",
-    "jest-axe": "^3.4.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-enzyme": "^7.1.2"
   },
   "majestic": {
