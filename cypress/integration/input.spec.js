@@ -5,7 +5,7 @@ describe('Logging In - HTML Web Form', () => {
     })
 
     it('displays errors on login', () => {
-      cy.get('input[name=email]').type('jane.lae')
+      cy.get('input[name=email]').type('jane.doe')
       cy.get('input[name=password]').click()
       cy.get('button[type=submit]').click()
 

@@ -15,7 +15,7 @@ describe('<Input />', () => {
     error: null,
     label: 'Test input',
     name: 'test',
-    onChange: c => c,
+    onChange: jest.fn(),
     type: 'email',
     value: 'test',
   }
@@ -23,7 +23,6 @@ describe('<Input />', () => {
   beforeEach(() => {
     const component = (
       <main>
-        <p id="describedBytest" />
         <Input {...props} />
       </main >
     )
@@ -40,7 +39,6 @@ describe('<Input />', () => {
         runOnly: {
           values: ['wcag2a', 'wcag2aa'],
         },
-        resultTypes: ['violations'],
       })
 
       if (res.violations.length > 0) {
@@ -56,18 +54,6 @@ describe('<Input />', () => {
           'aria-valid-attr-value': { enabled: false },
         },
       })
-      expect(results).toHaveNoViolations()
-    })
-
-    it('should test axe core with jest plugin skip unrelevant error', async () => {
-      const results = await jestAxe(jestAxeComponent, {
-        rules: {
-          // for demonstration only, don't disable rules that need fixing.
-          label: { enabled: false },
-          'aria-valid-attr-value': { enabled: false },
-        },
-      })
-
       expect(results).toHaveNoViolations()
     })
   })
